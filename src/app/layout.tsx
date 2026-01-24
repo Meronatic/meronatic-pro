@@ -27,7 +27,7 @@ export default function RootLayout({
                 fontSans.variable
             )}>
                 {children}
-                <WhatsAppButton />
+                {/* <WhatsAppButton /> */}
                 <Script id="chatwoot-sdk" strategy="afterInteractive">
                     {`
                       (function(d,t) {
@@ -45,6 +45,7 @@ export default function RootLayout({
                       })(document,"script");
                     `}
                 </Script>
+
             </body>
         </html>
     );
