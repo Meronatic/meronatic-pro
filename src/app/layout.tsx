@@ -4,7 +4,7 @@ import { Inter as FontSans } from "next/font/google"; // Using Inter as default 
 import { cn } from "../components/ui/utils";
 import { WhatsAppButton } from "../components/WhatsAppButton";
 import Script from "next/script";
-import { ChatwootWidget } from "../components/ChatwootWidget";
+
 
 const fontSans = FontSans({
     subsets: ["latin"],
@@ -29,7 +29,23 @@ export default function RootLayout({
             )}>
                 {children}
                 {/* <WhatsAppButton /> */}
-                <ChatwootWidget />
+                <Script id="chatwoot-widget" strategy="afterInteractive">
+                    {`
+            (function(d,t) {
+            var BASE_URL="https://chat.meronatic.com";
+            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=BASE_URL+"/packs/js/sdk.js";
+            g.async = true;
+            s.parentNode.insertBefore(g,s);
+            g.onload=function(){
+                window.chatwootSDK.run({
+                    websiteToken: 'LFQQNMEq872v3i3jwoRmZPZ9',
+                    baseUrl: BASE_URL
+                })
+            }
+        })(document,"script");
+            `}
+                </Script>
 
             </body>
         </html>
