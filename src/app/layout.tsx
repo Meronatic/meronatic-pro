@@ -31,18 +31,19 @@ export default function RootLayout({
                 <Script id="chatwoot-sdk" strategy="afterInteractive">
                     {`
                       (function(d,t) {
-                        var BASE_URL="http://chatwoot-twcoc0go8gg8cgsg0kwcog4o.72.62.191.145.sslip.io";
+                        var BASE_URL=process.env.NEXT_PUBLIC_CHATWOOT_BASE_URL || "http://chatwoot-twcoc0go8gg8cgsg0kwcog4o.72.62.191.145.sslip.io";
                         var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                         g.src=BASE_URL+"/packs/js/sdk.js";
                         g.async = true;
                         s.parentNode.insertBefore(g,s);
                         g.onload=function(){
                           window.chatwootSDK.run({
-                            websiteToken: 'LFQQNMEq872v3i3jwoRmZPZ9',
+                            websiteToken: process.env.NEXT_PUBLIC_CHATWOOT_TOKEN || 'LFQQNMEq872v3i3jwoRmZPZ9',
                             baseUrl: BASE_URL
                           })
                         }
                       })(document,"script");
+
                     `}
                 </Script>
 

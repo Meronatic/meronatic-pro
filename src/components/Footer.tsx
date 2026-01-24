@@ -20,19 +20,19 @@ export function Footer() {
               Meronatic PRO Services provides professional Corporate Services in the UAE, helping businesses and individuals manage licensing, government procedures, and compliance.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <Link href="https://www.linkedin.com/groups/17481009" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </Link>
-              <Link href="https://www.tiktok.com/@meronaticpro?_r=1&_t=ZS-93DsU2BWswy" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_SOCIAL_TIKTOK || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 {/* Custom TikTok Icon since standard library might miss it */}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                   <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                 </svg>
               </Link>
-              <Link href="https://www.instagram.com/meronaticpro" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </Link>
-              <Link href="https://www.facebook.com/people/Meronatic-PRO-Services/61586641676555/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Link href={process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK || "#"} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </Link>
             </div>
