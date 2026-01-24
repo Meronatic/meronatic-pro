@@ -3,7 +3,8 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
     try {
         const data = await request.json();
-        const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || "https://meronatic-developer.app.n8n.cloud/webhook/form-submission";
+        // Hardcoded n8n webhook URL
+        const webhookUrl = "https://meronatic-developer.app.n8n.cloud/webhook/form-submission";
 
         console.log(`[API] Sending to n8n: ${webhookUrl}`);
 
