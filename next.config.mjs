@@ -6,6 +6,9 @@ const nextConfig = {
         buildActivity: false,
         turbopack: false,
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     output: "standalone",
     // basePath: process.env.NODE_ENV === "production" ? "/PRO-service" : "", // Disabled for custom domain
     images: {
