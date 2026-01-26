@@ -163,11 +163,13 @@ html {
 }
 
 /* Chatwoot Widget positioning override */
-.woot-widget-holder {
-  bottom: 96px !important;
-  /* 24px (bottom-6) + 56px (h-14) + 16px (gap) */
-  right: 24px !important;
-  /* right-6 is 1.5rem = 24px */
+@media (min-width: 768px) {
+  .woot-widget-holder {
+    bottom: 96px !important;
+    /* 24px (bottom-6) + 56px (h-14) + 16px (gap) */
+    right: 24px !important;
+    /* right-6 is 1.5rem = 24px */
+  }
 }
 
 /* Ensure iframe fills container */
