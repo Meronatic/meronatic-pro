@@ -29,12 +29,14 @@ export function PartnersSection() {
                 <div className="flex gap-16 md:gap-24 animate-tech-scroll flex-nowrap min-w-full">
                     {/* Render 8 sets to ensure smooth loop on large screens */}
                     {[...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, i) => (
-                        <div key={i} className="whitespace-nowrap flex items-center justify-center transition-all duration-500 cursor-default relative w-80 h-40 bg-white/5 rounded-lg border border-white/5">
+                        <div key={i} className="whitespace-nowrap flex items-center justify-center transition-all duration-500 cursor-default relative w-80 h-40 bg-white/5 rounded-lg border border-white/5 mx-4">
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
                                 fill
-                                className="object-contain"
+                                sizes="(max-width: 768px) 100vw, 320px"
+                                className="object-contain p-6"
+                                priority
                             />
                         </div>
                     ))}
