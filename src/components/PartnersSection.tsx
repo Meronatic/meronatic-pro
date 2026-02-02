@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FadeIn } from "./ui/FadeIn";
 
 const PARTNERS = [
-    "Strategic Ally", "Global Ventures", "Prime Holdings",
-    "Elite Corporate", "Summit Group", "Apex Solutions",
-    "Nexus Global", "Vanguard Corp", "Horizon Partners"
+    { name: "Meydan", logo: "/images/partners/meydan.jpg" },
+    { name: "SPC Free Zone", logo: "/images/partners/spc-free-zone.jpg" },
+    { name: "Ajman Free Zone", logo: "/images/partners/ajman-free-zone.jpg" },
 ];
 
 export function PartnersSection() {
@@ -28,10 +29,13 @@ export function PartnersSection() {
                 <div className="flex gap-16 md:gap-24 animate-tech-scroll flex-nowrap min-w-full">
                     {/* Render 4 sets to ensure smooth loop */}
                     {[...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, i) => (
-                        <div key={i} className="whitespace-nowrap flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100 duration-500 cursor-default">
-                            <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-muted-foreground to-foreground/50">
-                                {partner}
-                            </span>
+                        <div key={i} className="whitespace-nowrap flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-50 hover:opacity-100 duration-500 cursor-default relative w-48 h-20">
+                            <Image
+                                src={partner.logo}
+                                alt={partner.name}
+                                fill
+                                className="object-contain"
+                            />
                         </div>
                     ))}
                 </div>
