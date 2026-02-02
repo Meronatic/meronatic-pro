@@ -5,9 +5,9 @@ import Image from "next/image";
 import { FadeIn } from "./ui/FadeIn";
 
 const PARTNERS = [
-    { name: "Meydan", logo: "/images/partners/meydan.jpg" },
-    { name: "SPC Free Zone", logo: "/images/partners/spc-free-zone.jpg" },
-    { name: "Ajman Free Zone", logo: "/images/partners/ajman-free-zone.jpg" },
+    { name: "Meydan", logo: "/images/partners/meydan.png" },
+    { name: "SPC Free Zone", logo: "/images/partners/spc-free-zone.png" },
+    { name: "Ajman Free Zone", logo: "/images/partners/ajman-free-zone.png" },
 ];
 
 export function PartnersSection() {
