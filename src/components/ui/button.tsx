@@ -51,6 +51,10 @@ function Button({
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+<<<<<<< HEAD
+=======
+      suppressHydrationWarning
+>>>>>>> 378a0f332e613ea88367b8665c1a6b7d0bd5cb55
       {...props}
     />
   );

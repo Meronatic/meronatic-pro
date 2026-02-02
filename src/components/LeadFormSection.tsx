@@ -98,7 +98,11 @@ export function LeadFormSection({
                       </div>
                       <div className="pt-8 border-t border-primary/10">
                         <Button className="w-full h-12 text-base gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white border-none shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all" asChild>
+<<<<<<< HEAD
                           <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_PHONE}`} target="_blank" rel="noopener noreferrer">
+=======
+                          <a href="https://wa.me/971554591737" target="_blank" rel="noopener noreferrer">
+>>>>>>> 378a0f332e613ea88367b8665c1a6b7d0bd5cb55
                             <MessageCircle className="w-5 h-5" />
                             Chat on WhatsApp
                           </a>
